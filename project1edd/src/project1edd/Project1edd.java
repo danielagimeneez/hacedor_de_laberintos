@@ -5,6 +5,8 @@
  */
 package project1edd;
 
+import interfaces.Home;
+
 /**
  *
  * @author Daniela Gimenez
@@ -15,7 +17,10 @@ public class Project1edd {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        //Muestro Ventana del PreHome
+        Home ventana1 = new Home();
+        ventana1.setVisible(true);
     }
     
 }
