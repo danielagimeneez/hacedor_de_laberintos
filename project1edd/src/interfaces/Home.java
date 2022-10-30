@@ -49,7 +49,7 @@ public class Home extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel1.setText("Alto");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel2.setText("Desarrollado por: Castillo Abraham, Giménez Daniela, Pinto Andrea");
@@ -88,7 +88,7 @@ public class Home extends javax.swing.JFrame {
                 inputAltoActionPerformed(evt);
             }
         });
-        jPanel1.add(inputAlto, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 120, 40));
+        jPanel1.add(inputAlto, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 120, 40));
 
         jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
         jLabel5.setText("Método para recorrerlo");
@@ -99,7 +99,7 @@ public class Home extends javax.swing.JFrame {
                 inputAnchoActionPerformed(evt);
             }
         });
-        jPanel1.add(inputAncho, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 120, 40));
+        jPanel1.add(inputAncho, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 120, 40));
 
         jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
         jLabel6.setText("x");
@@ -107,7 +107,7 @@ public class Home extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel7.setText("Ancho");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
         jLabel8.setText("Dimensiones del laberinto");
@@ -135,7 +135,10 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_generarLaberintoBtnActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        int alto = Integer.parseInt(inputAlto.getText());
+        int ancho = Integer.parseInt(inputAncho.getText());
+        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void inputAltoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputAltoActionPerformed
