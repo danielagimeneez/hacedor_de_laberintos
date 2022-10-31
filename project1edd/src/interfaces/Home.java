@@ -4,6 +4,8 @@
  */
 package interfaces;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author andres
@@ -62,7 +64,7 @@ public class Home extends javax.swing.JFrame {
                 generarLaberintoBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(generarLaberintoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, 260, 40));
+        jPanel1.add(generarLaberintoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 460, 260, 40));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 48)); // NOI18N
         jLabel3.setText("Bienvenido al laberinto");
@@ -128,17 +130,29 @@ public class Home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void generarLaberintoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarLaberintoBtnActionPerformed
+        if((!inputAlto.getText().isEmpty() && !inputAncho.getText().isEmpty())){
+            try{
+                int alto = Integer.parseInt(inputAlto.getText());
+                int ancho = Integer.parseInt(inputAncho.getText());
+                
+                
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(null, "Ingrese un dato valido");
+            }
+            
+        }else{
+            JOptionPane.showMessageDialog(null, "Ingrese todos los campos");
+        }
+
         //Abrir la ventana del home
-        this.setVisible(false);
-        LaberintoUI ventana1 = new LaberintoUI();
-        ventana1.setVisible(true);
+//        this.setVisible(false);
+//        LaberintoUI ventana1 = new LaberintoUI();
+//        ventana1.setVisible(true);
     }//GEN-LAST:event_generarLaberintoBtnActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        int alto = Integer.parseInt(inputAlto.getText());
-        int ancho = Integer.parseInt(inputAncho.getText());
-        
-        
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void inputAltoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputAltoActionPerformed
