@@ -14,7 +14,7 @@ import java.util.LinkedList;
 public class Grafo {
     int numVerts;
     int maxVerts;
-    Nodo [] tablAdc;
+    public Nodo [] tablAdc;
     
     public Grafo(int mx) {
         tablAdc = new Nodo[mx];

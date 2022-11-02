@@ -14,7 +14,7 @@ import java.util.LinkedList;
 public class Nodo {
     String nombre;
     int numVertice;
-    LinkedList<Object> lad;
+    public LinkedList<Object> lad;
     
     
     public Nodo(String x) {

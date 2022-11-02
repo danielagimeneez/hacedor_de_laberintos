@@ -33,7 +33,7 @@ public class ResultadoUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        generarLaberintoBtn1 = new javax.swing.JButton();
+        Inicio = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,7 +52,7 @@ public class ResultadoUI extends javax.swing.JFrame {
                 generarLaberintoBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(generarLaberintoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 390, 260, 40));
+        jPanel1.add(generarLaberintoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, 260, 40));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 48)); // NOI18N
         jLabel3.setText("¡Lograste culminar!");
@@ -73,14 +73,14 @@ public class ResultadoUI extends javax.swing.JFrame {
         jLabel4.setText("Tiempo de ejecución:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, -1, -1));
 
-        generarLaberintoBtn1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        generarLaberintoBtn1.setText("Inicio");
-        generarLaberintoBtn1.addActionListener(new java.awt.event.ActionListener() {
+        Inicio.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        Inicio.setText("Inicio");
+        Inicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                generarLaberintoBtn1ActionPerformed(evt);
+                InicioActionPerformed(evt);
             }
         });
-        jPanel1.add(generarLaberintoBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 260, 40));
+        jPanel1.add(Inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, 260, 40));
 
         jTextField2.setEditable(false);
         jTextField2.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
@@ -97,19 +97,20 @@ public class ResultadoUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void generarLaberintoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarLaberintoBtnActionPerformed
-        //Abrir la ventana del home
-        this.setVisible(false);
-        LaberintoUI ventana1 = new LaberintoUI();
-        ventana1.setVisible(true);
+        // TODO add your handling code here:
     }//GEN-LAST:event_generarLaberintoBtnActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void generarLaberintoBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarLaberintoBtn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_generarLaberintoBtn1ActionPerformed
+    private void InicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InicioActionPerformed
+        
+        //Abrir la ventana del home
+        this.setVisible(false);
+        Home ventana1 = new Home();
+        ventana1.setVisible(true);
+    }//GEN-LAST:event_InicioActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
@@ -154,8 +155,8 @@ public class ResultadoUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Inicio;
     private javax.swing.JButton generarLaberintoBtn;
-    private javax.swing.JButton generarLaberintoBtn1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

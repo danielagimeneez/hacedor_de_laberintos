@@ -4,12 +4,19 @@
  */
 package interfaces;
 
+import javax.swing.JOptionPane;
+import project1edd.Grafo;
+import project1edd.Nodo;
+
 /**
  *
  * @author andres
  */
 public class Home extends javax.swing.JFrame {
-
+    public static int alto = 0;
+    public static int ancho = 0;
+    static int totalNodos;
+    public static String metodo;
     /**
      * Creates new form PreHome
      */
@@ -62,7 +69,7 @@ public class Home extends javax.swing.JFrame {
                 generarLaberintoBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(generarLaberintoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, 260, 40));
+        jPanel1.add(generarLaberintoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 460, 260, 40));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 48)); // NOI18N
         jLabel3.setText("Bienvenido al laberinto");
@@ -128,17 +135,37 @@ public class Home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void generarLaberintoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarLaberintoBtnActionPerformed
-        //Abrir la ventana del home
+        if((!inputAlto.getText().isEmpty() && !inputAncho.getText().isEmpty())){
+            try{
+                alto = Integer.parseInt(inputAlto.getText());
+                ancho = Integer.parseInt(inputAncho.getText());
+                
+                
+                metodo = (String) TipoMetodo.getSelectedItem();
+                
+
+                
+                
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(null, "Ingrese un dato valido");
+            }
+            
+        }else{
+            JOptionPane.showMessageDialog(null, "Ingrese todos los campos");
+        }
         this.setVisible(false);
         LaberintoUI ventana1 = new LaberintoUI();
         ventana1.setVisible(true);
+
+        //Abrir la ventana del home
+//        this.setVisible(false);
+//        LaberintoUI ventana1 = new LaberintoUI();
+//        ventana1.setVisible(true);
     }//GEN-LAST:event_generarLaberintoBtnActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        int alto = Integer.parseInt(inputAlto.getText());
-        int ancho = Integer.parseInt(inputAncho.getText());
-        
-        
+       System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void inputAltoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputAltoActionPerformed
@@ -157,30 +184,6 @@ public class Home extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -188,6 +191,8 @@ public class Home extends javax.swing.JFrame {
             }
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> TipoMetodo;
