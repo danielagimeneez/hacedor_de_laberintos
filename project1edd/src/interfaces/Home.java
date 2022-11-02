@@ -5,8 +5,11 @@
 package interfaces;
 
 import javax.swing.JOptionPane;
+<<<<<<< HEAD
 import project1edd.Grafo;
 import project1edd.Nodo;
+=======
+>>>>>>> 1c30afadcdabe49a099a76209d2bd491f15badd2
 
 /**
  *
@@ -137,6 +140,7 @@ public class Home extends javax.swing.JFrame {
     private void generarLaberintoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarLaberintoBtnActionPerformed
         if((!inputAlto.getText().isEmpty() && !inputAncho.getText().isEmpty())){
             try{
+<<<<<<< HEAD
                 alto = Integer.parseInt(inputAlto.getText());
                 ancho = Integer.parseInt(inputAncho.getText());
                 
@@ -144,6 +148,10 @@ public class Home extends javax.swing.JFrame {
                 metodo = (String) TipoMetodo.getSelectedItem();
                 
 
+=======
+                int alto = Integer.parseInt(inputAlto.getText());
+                int ancho = Integer.parseInt(inputAncho.getText());
+>>>>>>> 1c30afadcdabe49a099a76209d2bd491f15badd2
                 
                 
             }
@@ -154,9 +162,12 @@ public class Home extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(null, "Ingrese todos los campos");
         }
+<<<<<<< HEAD
         this.setVisible(false);
         LaberintoUI ventana1 = new LaberintoUI();
         ventana1.setVisible(true);
+=======
+>>>>>>> 1c30afadcdabe49a099a76209d2bd491f15badd2
 
         //Abrir la ventana del home
 //        this.setVisible(false);
@@ -165,7 +176,11 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_generarLaberintoBtnActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+<<<<<<< HEAD
        System.exit(0);
+=======
+        // TODO add your handling code here:
+>>>>>>> 1c30afadcdabe49a099a76209d2bd491f15badd2
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void inputAltoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputAltoActionPerformed
